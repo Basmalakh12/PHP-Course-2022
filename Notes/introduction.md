@@ -43,15 +43,7 @@ var_dump((bool)""); // bool (false)
 var_dump((bool)"php"); //bool (true)
 
 ```
-### var_dump() be true when
-- " "
-- empty arry
-- 0
 
-### var_dump() be true when
-- "string"
-- array
-- 1
 
 
 
