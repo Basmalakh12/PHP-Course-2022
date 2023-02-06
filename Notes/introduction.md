@@ -17,7 +17,7 @@
 - array : ` set of elements`
 -  get type() :` return data type `
 
-## type juggling and automatic type 
+## type juggling and automatic type conversion
 ```php
 
 echo 1 + "2";//3

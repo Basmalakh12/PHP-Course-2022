@@ -1,6 +1,7 @@
-# Data and time functions
+ ## DateTime
+ ## Data and time functions
 
-date_defult_timezone_get() :` Gets the default timezone used by all date/time functions `
+ date_defult_timezone_get() :` Gets the default timezone used by all date/time functions `
 
  date_defult_timezone_set(timezone) : ` set timezoneused by all date/time functions `
  ```php
@@ -13,7 +14,7 @@ date_defult_timezone_get() :` Gets the default timezone used by all date/time fu
 
  timezone_open(timezone) :` create new datetimezone object`
 
- checkdate( M , D , Y ) :`validate a gregorian data`
+ checkdate( M , D , Y ) :`validate a gregorian date`
 
 
  <details>
@@ -98,10 +99,27 @@ date_defult_timezone_get() :` Gets the default timezone used by all date/time fu
 
  ```php
  $d = date_creat();
- echo date_format($d, "Y"). "<br>" // 2023
- echo date_format($d, "y"). "<br>" //23
+ echo date_format($d, "Y"). "<br>"; // 2023
+ echo date_format($d, "y"). "<br>"; //23
 
  ```
+ ##  Add , Sub , Modify
+ date_interval_create_from_date_string()
+ date_add()
+ date_sub()
+ date_modify()
+
+ ```php
+ $d = date_creat();
+ date_add($d,date_interval_create_from_date_string("1 year 2 months 3 day"));
+ date_sub($d,date_interval_create_from_date_string("1 year 2 months 3 day"));
+ date_modify($d,"+20 days");
+ echo date_format($d, "Y/m/d H:i:s A");
+
+
+ ```
+
+
 
 
 
