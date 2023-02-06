@@ -4,7 +4,7 @@ date_defult_timezone_get() :` Gets the default timezone used by all date/time fu
 
  date_defult_timezone_set(timezone) : ` set timezoneused by all date/time functions `
  ```php
- 
+
   date_defult_timezone_set("Africa/Cairo");
 
 ```
@@ -98,8 +98,8 @@ date_defult_timezone_get() :` Gets the default timezone used by all date/time fu
 
  ```php
  $d = date_creat();
- echo date_format($d, "Y"). "<br>"
- echo date_format($d, "y"). "<br>"
+ echo date_format($d, "Y"). "<br>" // 2023
+ echo date_format($d, "y"). "<br>" //23
 
  ```
 
