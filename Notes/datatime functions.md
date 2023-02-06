@@ -13,7 +13,7 @@ date_defult_timezone_get() :` Gets the default timezone used by all date/time fu
 
  timezone_open(timezone) :` create new datetimezone object`
 
- checkdata( M , D , Y ) :`validate a gregorian data`
+ checkdate( M , D , Y ) :`validate a gregorian data`
 
 
  <details>
