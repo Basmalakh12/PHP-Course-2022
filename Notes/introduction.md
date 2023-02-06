@@ -37,7 +37,7 @@ echo (int)(10.5 +10.5);  // 21
 
 ```
 ## Boolean And Converting To Boolean
-var_dump() :`sed to dump information about a variable. This function displays structured information such as type and value of the given variable.`
+var_dump() :`used to dump information about a variable. This function displays structured information such as type and value of the given variable.`
 ```php
 var_dump((bool)""); // bool (false)
 var_dump((bool)"php"); //bool (true)
