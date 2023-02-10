@@ -156,6 +156,16 @@
  ```
  ### Date_Diff , StrToTime
  - deta_diff() :`returns the difference between two DateTime objects "difference between two period"`
+ ```php
+ date_defult_timezone_set("Africa/Cairo");
+ $reg = date_creat("2023-02-10");
+ $now = date_creat("now");
+ $diff = deta_diff($reg,$now);
+ echo "<pre>";
+ print_r($diff);
+ echo "</pre>";
+ echo "you are a member for " . $diff->dayes . "Days <br>";
+ ```
  - strtotime(datetime,base):` get date in text`
 
  
