@@ -1,6 +1,6 @@
  # OOP " Object Oriented Programming "
 
- Class :` represent atemplte consists of properties 'attributes' and method 'function' `
+ Class :` represent a templte consists of properties 'attributes' and method 'function' `
 
  Object :` is an instance of typical class `
 
