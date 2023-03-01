@@ -72,7 +72,7 @@
  // $mohamed->$age = 12;
  $mohamed->setlevel(-5);
  echo $mohamed->getlevel();
- echo $mohamed->welcomestudent();
+ // echo $mohamed->welcomestudent();
  ?>
 
  
