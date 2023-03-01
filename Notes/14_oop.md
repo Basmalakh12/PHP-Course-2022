@@ -5,7 +5,7 @@
  - private
      - call object inside class
  - protected
-     - call by inheritance
+     - call object inside class only but can call by inheritance
 
 
 
