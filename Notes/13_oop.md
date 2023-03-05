@@ -12,7 +12,7 @@
 
   ```php
 
-  <?php
+ 
  class Employee
  {
     public $name;
@@ -54,6 +54,6 @@
  echo '<p>' . $Basmala->name . ' has Overtime of ' . $Basmala->calculateOvertime() . 'L.E </p>' ;
  echo '<p>' . $Basmala->name . ' has Abbsent of ' . $Basmala->calculateAbbsent() . 'L.E </p>' ;
  echo '<p>' . $Basmala->name . ' has Total Salar of ' .  $Basmala->calculateTotalSalar() . 'L.E </p>' ;
- ?>
+ 
   ```
  

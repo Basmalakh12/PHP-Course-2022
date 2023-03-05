@@ -36,7 +36,7 @@
     public function setlevel($level){
         // make sure that "the user inter ineger number" this is an integer 
         $level = filter_var($level , FILTER_SANITIZE_NUMBER_INT);
-        $level = abs($level); // to make negitive number to positive
+        $level = abs($level); // to convert negitive number to positive
         // $level = abs (filter_var($level , FILTER_SANITIZE_NUMBER_INT));
         if($level < 1 || $level > 12){
             throw new Exception('sorry this level not avilable');
@@ -59,7 +59,7 @@
         return $this->name ; 
     }
     public function filtername(){
-        $name = substr($name , 0,12); // number of strings in name from 0 to 12
+        $name = substr($name , 0,12); // number of strings 13 char
         $name = ucwords($name); // make first string uper case
         // $name = ucwords( substr($name , 0,12) );
 
