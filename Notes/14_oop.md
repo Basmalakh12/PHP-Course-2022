@@ -1,79 +1,153 @@
- # Constructor & Access Modifiers
- ##  Access Modifiers
- - public
-     - call object inside and outside class
- - private
-     - call object inside class
- - protected
-     - call object inside class only but can call by inheritance
-
-
-
+ 
+ # Inheritance
+ 
  ```php
- <?php
+ 
  class student{
-    public $name;
-    public $age;
-    public $score;
-    private $level;
-    public $minscore = 150;
-    public $maxscore = 300;
-    public $subjects = array (
+    protected $name; //proprety
+    protected $age;
+    protected $score;
+    protected $minscore = 150;
+    protected $maxscore = 300;
+    protected $subjects = array (
         'Arabic' => 0,
         'English' => 0,
         'math' => 0,
         'science' => 0
     ); 
-    public function __constructor($name , $age ){
+    const MAX_AGE = 12;
+    const MIN_AGE = 20;
+    private static $teacher ='Ahmed ibrahim';
+
+
+    public function __construct($name,$age){
+        $this->setName($name);
+        $this->setAge($age);
+
+    }
+
+
+
+    private function setName($name){
+        $name = strtolower($name); 
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+        $name = ucwords($name);
+        $name = substr($name,0,30);
         $this->name = $name;
-        if($age >= 12){
+    }
+    public function getName(){
+        return $this->name;
+    }
+
+
+
+
+    private function setAge($age){
+        $age = filter_var($age , FILTER_SANITIZE_NUMBER_INT);
+        $age = abs($age);
+        if ($age < static:: MAX_AGE || $age > static:: MIN_AGE) // for call constant
+        //if ($age < self:: MAX_AGE || $age > self:: MIN_AGE)
+        //  if ($age < 12 || $age > 20)
+        { 
+            throw new Exception('sorry the student\'s age not avilable');
+        }else{
             $this->age = $age;
-        }else{
-            throw new Exception('sorry the student\'s age must be greater than or equal 12');
-        }
-        
-    }
-    public function setlevel($level){
-        // make sure that "the user inter ineger number" this is an integer 
-        $level = filter_var($level , FILTER_SANITIZE_NUMBER_INT);
-        $level = abs($level); // to convert negitive number to positive
-        // $level = abs (filter_var($level , FILTER_SANITIZE_NUMBER_INT));
-        if($level < 1 || $level > 12){
-            throw new Exception('sorry this level not avilable');
-        }else{
-            $this->level = $level;
         }
     }
-    public function getlevel(){
-        return $this->level ;
+    public function getAge(){
+        return $this->age;
     }
-    public function welcomestudent(){
-        echo 'welcome to our page '.$this->name;
-    }
-    public function setname($name){
-        $name = $this->filtername($name);
-        $this->name = $name;
-        // $this->name = $this->filtername($name);
-    }
-    public function getname($name){
-        return $this->name ; 
-    }
-    public function filtername(){
-        $name = substr($name , 0,12); // number of strings 13 char
-        $name = ucwords($name); // make first string uper case
-        // $name = ucwords( substr($name , 0,12) );
 
-        return $name;
-        
+
+
+
+    public function getMaxscore(){
+        return $this->maxscore;
     }
+    public function getMinscore(){
+        return $this->minscore;
+    }
+    public function getSubjects(){
+        return $this->subjects;
+    }
+
+
+    public function setSubjectScore($subjectname,$value){
+
+        if(array_key_exists($subjectname,$this->subjects)){
+            $value = filter_var($value,FILTER_SANITIZE_NUMBER_INT);
+            $value = abs($value);
+            if($value > 50){
+                throw new Exception('sorry the maximun score for subject is 50');
+            }else{
+                $this->subjects[$subjectname] = $value;
+            }
+                
+            
+        }else{
+            throw new Exception('sorry tthis subject not found');
+            
+        }
+
+    }
+    public function getSubjectsScore(){
+        if(array_key_exists($subjectname,$this->subjects)){
+            return $this->subjects[$subjectname];
+        }else{
+            throw new Exception('sorry tthis subject not found');
+            
+        }
+
+    }
+    public static function sayWelcom(){
+        return 'Welcom to our class ';
+    }
+    public function ShowTeacherName() //nonstatic function
+    {
+        echo self::sayWelcom();
+        return self::$teacher; //static property
+        echo '<br>';
+    }
+
  }
- $mohamed = new student('Mohamed Ahmed' , 12 );
- // $mohamed->$name = 'Mohamed Ahmed';
- // $mohamed->$age = 12;
- $mohamed->setlevel(-5);
- echo $mohamed->getlevel();
- // echo $mohamed->welcomestudent();
- ?>
+ // inheritance
+ class Grade1student extends student{
 
- 
+    private $activity;
+    const MAX_AGE = 13;
+    const MIN_AGE = 20;
+     
+    public function __construct($name,$age)
+    {
+
+        parent::__construct($name,$age); // for call parent construct
+        $this->minscore = 125;
+        $this->maxscore = 150;
+        $this->subjects['Computer'] = 0;
+
+    }
+
+    
+
+    public function setStudentAsActive(){
+        $this->activity = 'Active';
+    }
+    public function setStudentAsNotActive(){
+        $this->activity = 'Not Active';
+    }
+
+
+
+ }
+ $ali = new Grade1student("ali ahmed ibrahim abd elhamed",13);
+ $ali-> setSubjectScore('Arabic',27);
+ print_r($ali->getSubjects());
+ echo '<br>';
+ echo $ali->getAge();
+ echo '<br>';
+
+ //call static proprety 
+ echo Grade1student::ShowTeacherName();
+ echo '<br>';
+ echo $ali->ShowTeacherName();
  ```
