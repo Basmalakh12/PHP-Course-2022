@@ -1,6 +1,8 @@
-## $_GET
- - An associative array of variables passed to the current script via the URL parameters " query string "
- - This is a 'superglobal variable'
+# $_GET
+
+- An associative array of variables passed to the current script via the URL parameters " query string "
+- This is a 'superglobal variable'
+
  ```php
  <?php
  $users = array (
@@ -31,9 +33,11 @@
 
  ```
 
- - Assuming the user entered http://example.com/?user=1
-     - output =>  welcomto our website ,mohamed ,your age is 44
- - Assuming the user entered http://example.com/?user=2
-     - output =>  welcomto our website ,abdullah ,your age is 25 
- - Assuming the user entered http://example.com/?user=3
-     - output =>  welcomto our website ,gest ,your age is unknown 
+- Assuming the user entered http://example.com/?user=1
+  - output =>  welcomto our website ,mohamed ,your age is 4
+
+- Assuming the user entered http://example.com/?user=2
+  - output =>  welcomto our website ,abdullah ,your age is 25
+
+- Assuming the user entered http://example.com/?user=3
+  - output =>  welcomto our website ,gest ,your age is unknown

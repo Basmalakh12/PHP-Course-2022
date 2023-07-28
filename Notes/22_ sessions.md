@@ -6,4 +6,4 @@
 - session_name — Get and/or set the current session name
 - session_unset — Free all session variables
 - session_write_close — Write session data and end session
-[Other Session Functions] (#https://www.php.net/manual/en/ref.session.php)
+- [Other Session Functions] (#https://www.php.net/manual/en/ref.session.php)
