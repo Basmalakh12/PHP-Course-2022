@@ -10,11 +10,11 @@
 - session_write_close :— Write session data and end session
 - session_start :— Start new or resume existing session
 - session_save_path :— Get and/or set the current session save path
-- [Other Session Functions] (#php.net/manual/en/ref.session.php)
+- [Other Session Functions] (#https://www.php.net/manual/en/ref.session.php)
 
 ## The SessionHandler class
 
-- [SessionHandle] (#php.net/manual/en/class.sessionhandler.php)
+- [SessionHandler] (#https://www.php.net/manual/en/class.sessionhandler.php)
 
 ```php
 define('SESSION_SAVE_PATH' , dirname(realpath(__FILE__)). DIRECTORY_SEOARATOR .'sessions');
