@@ -1,13 +1,13 @@
- # Constructor & Access Modifiers
- ##  Access Modifiers
- - public
-     - call object inside and outside class
- - private
-     - call object inside class
- - protected
-     - call object inside class only but can call by inheritance
+# Constructor & Access Modifiers
 
+## Access Modifiers " visiblitiy"
 
+- public
+  - call object inside and outside class
+- private
+  - call object inside class
+- protected
+  - call object inside class only but can call by inheritance
 
  ```php
  <?php
@@ -67,12 +67,13 @@
         
     }
  }
- $mohamed = new student('Mohamed Ahmed' , 12 );
+ $mohamed = new student('Mohamed Ahmed' , 12 ); // mohamed is a instance of student
  // $mohamed->$name = 'Mohamed Ahmed';
  // $mohamed->$age = 12;
  $mohamed->setlevel(-5);
  echo $mohamed->getlevel();
  // echo $mohamed->welcomestudent();
+ 
  ?>
 
  

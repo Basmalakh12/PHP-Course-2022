@@ -1,20 +1,20 @@
- # Abstract Classes and Interfaces
- 
- ## Abstract Classes
- - An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
- - When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
- - abstract method be protected or public
- 
- ## Interfaces
- - Interfaces method be public only
- - A class that implements an interface must implement all the methods declared in the interface.
- 
- ## Abstract Classes Compared to Interfaces
- - Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. However, with abstract classes, you can declare fields that are not static, and define public, protected, and private concrete methods. With interfaces, all fields are automatically public, static, and all methods that you declare or define are public. In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.
- 
- 
- 
- 
+# Abstract Classes and Interfaces
+
+## Abstract Classes
+
+- An abstract class is a class that is declared abstract—it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+- When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the subclass must also be declared abstract.
+- abstract method be protected or public
+
+## Interfaces
+
+- Interfaces method be public only
+- A class that implements an interface must implement all the methods declared in the interface.
+
+## Abstract Classes Compared to Interfaces
+
+- Abstract classes are similar to interfaces. You cannot instantiate them, and they may contain a mix of methods declared with or without an implementation. However, with abstract classes, you can declare fields that are not static, and define public, protected, and private concrete methods. With interfaces, all fields are automatically public, static, and all methods that you declare or define are public. In addition, you can extend only one class, whether or not it is abstract, whereas you can implement any number of interfaces.
+
  ```php
  abstract class Employee{
     public $firstName;
@@ -45,10 +45,14 @@
 
      abstract protected function calculateTotalSalar();
  }
+
+
   interface EmployeeInterface{
 
     public function showAddress();
   }
+
+
 
  class Manger extends Employee implements EmployeeInterface{
     

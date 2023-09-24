@@ -1,6 +1,6 @@
- ## Namespaces
- 
- - affected types by namnespaces are traits , classes , interfaces , functions and constants
+# Namespaces
+
+- affected types by namnespaces are traits , classes , interfaces , functions and constants
  first statment in php file
 
  ```php
@@ -56,6 +56,7 @@ echo namespace\HELLO;
 echo "<br>";
 $model = new Models\TestModel;
 ```
+
 ```php
 
 namespace Main\Utilities\Actions;
@@ -70,13 +71,10 @@ namespace Main\Utilities\Actions;
     }
 
 ```
+
 ```php
 namespace Main\Models;
     class TestModel{
         
     }
 ```
-
-
-
-

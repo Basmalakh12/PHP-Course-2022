@@ -1,14 +1,12 @@
- # OOP " Object Oriented Programming "
+# OOP " Object Oriented Programming "
 
  Class :` represent a templte consists of properties 'attributes' and method 'function' `
 
  Object :` is an instance of typical class `
 
- is_a ($object , $class) :` return true or false for an object is part of the class or not`
+ is_a ($object , $class) : `return true or false for an object is part of the class or not`
 
  this :` get used to  object '$Basmala' `
-
-
 
   ```php
 
@@ -56,4 +54,4 @@
  echo '<p>' . $Basmala->name . ' has Total Salar of ' .  $Basmala->calculateTotalSalar() . 'L.E </p>' ;
  
   ```
- 
+  

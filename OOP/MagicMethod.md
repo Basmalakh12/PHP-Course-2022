@@ -1,21 +1,18 @@
- # Magic Method
- 
-  - __set 
-     - runs when writing data to inaccessible property
-  - __get
-     - runs when a call is made to inaccessible property
-  - __isset
-     - triggerd when calling isset or empty on inaccessible property
-  - __unset
-     - triggerd when calling unset on inaccessible property
-  - __call
-     -  triggerd when invoking inaccessible methods in an object context
-  - __callstatic
-    - triggerd when invoking inaccessible methods is a static context
+# Magic Method
+
+- __set
+  - runs when writing data to inaccessible property
+- __get
+  - runs when a call is made to inaccessible property
+- __isset
+  - triggerd when calling isset or empty on inaccessible property
+- __unset
+  - triggerd when calling unset on inaccessible property
+- __call
+  - triggerd when invoking inaccessible methods in an object context
+- __callstatic
+  - triggerd when invoking inaccessible methods is a static context
   
-
-
- 
  ```php
  
   class student{
